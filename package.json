@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome",
+    "test:cypress:open": "start-server-and-test 3000 cy:open",
+    "test:cypress:run": "start-server-and-test 3000 cy:run"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -15,9 +19,13 @@
     "twemoji": "^13.0.1"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^6.0.0",
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.45",
+    "cypress": "^4.12.1",
+    "jest": "^26.2.2",
     "prettier": "2.0.5",
+    "start-server-and-test": "^1.11.3",
     "tailwindcss": "^1.6.2",
     "typescript": "^3.9.7"
   }

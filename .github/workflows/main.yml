@@ -8,12 +8,13 @@ jobs:
       - run: yarn install
       - run: yarn prettier --check .
 
-  build:
+  cypress:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build
+      - run: yarn test:cypress:run
 
   deploy:
     if: github.event_name	== 'push'
@@ -29,7 +30,7 @@ jobs:
   deployToProduction:
     if: github.event_name	== 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    needs: build
+    needs: [cypress]
     steps:
       - uses: actions/checkout@v2
       - run: npx vercel --prod --confirm --token $VERCEL_TOKEN -S $VERCEL_SCOPE -n $VERCEL_NAME
