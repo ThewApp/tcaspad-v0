@@ -1,8 +1,9 @@
 import "../styles/globals.css";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   // html lang attribute
-  React.useEffect(() => {
+  useEffect(() => {
     document.documentElement.lang = pageProps.lang || "en";
   });
 
