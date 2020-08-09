@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  // html lang attribute
+  React.useEffect(() => {
+    document.documentElement.lang = pageProps.lang || "en";
+  });
+
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
