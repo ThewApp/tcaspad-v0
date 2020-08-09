@@ -1,4 +1,3 @@
-import React from "react";
 import twemoji from "twemoji";
 import regex from "twemoji-parser/dist/lib/regex";
 
