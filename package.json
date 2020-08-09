@@ -8,7 +8,7 @@
     "start": "next start",
     "cy:open": "cypress open",
     "cy:run": "cypress run --browser chrome",
-    "test:jest": "jest",
+    "test:jest": "jest --coverage",
     "test:cypress:open": "start-server-and-test 3000 cy:open",
     "test:cypress:run": "start-server-and-test 3000 cy:run"
   },
