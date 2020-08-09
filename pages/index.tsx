@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main className="container mx-auto">
-        <h1 className="text-5xl my-8 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl my-8 text-center">
           <Twemoji>⚡️</Twemoji>Coming soon<Twemoji>⚡️</Twemoji>
         </h1>
       </main>
