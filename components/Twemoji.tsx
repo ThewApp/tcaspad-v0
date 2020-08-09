@@ -4,10 +4,14 @@ import regex from "twemoji-parser/dist/lib/regex";
 // https://github.com/twitter/twemoji/blob/master/scripts/build.js
 const UFE0Fg = /\uFE0F/g;
 
-type TwemojiProps = { children: string, className?: string };
+type TwemojiProps = { children: string; className?: string };
 
-export default function Twemoji({ children, className = "", ...props }: TwemojiProps) {
-    const emojis = children
+export default function Twemoji({
+  children,
+  className = "",
+  ...props
+}: TwemojiProps) {
+  const emojis = children
     .match(regex)
     .map((emoji) => ({
       codePoint: twemoji.convert.toCodePoint(emoji.replace(UFE0Fg, "")),
@@ -22,6 +26,6 @@ export default function Twemoji({ children, className = "", ...props }: TwemojiP
         key={emojiObj.alt + i}
         {...props}
       />
-    ))
-  return <>{emojis}</>
+    ));
+  return <>{emojis}</>;
 }
