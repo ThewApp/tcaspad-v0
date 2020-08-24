@@ -31,7 +31,7 @@
     "@types/react": "^16.9.45",
     "babel-jest": "^26.2.2",
     "cypress": "^4.12.1",
-    "jest": "^26.2.2",
+    "jest": "^26.4.2",
     "prettier": "2.0.5",
     "start-server-and-test": "^1.11.3",
     "tailwindcss": "^1.6.2",
